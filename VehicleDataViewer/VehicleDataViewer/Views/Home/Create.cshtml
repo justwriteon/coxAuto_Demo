@@ -1,0 +1,32 @@
+﻿@model VehicleDataViewer.Models.UploadViewModel
+
+<div class="card text-dark bg-light mb-3" style="max-width: 50rem;">
+    <div class="card-header">Upload File</div>
+    <div class="card-body">
+        <h5 class="card-title">File Upload</h5>
+        @*@if (ViewBag.Error != string.Empty)
+        {*@
+            <div class="alert alert-warning" role="alert" style="display:@(ViewBag.Error.Length > 0 ? "block" : "none")">
+                @ViewBag.Error
+            </div>
+       
+
+        <form enctype="multipart/form-data" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label asp-for="FileToUpload" class="form-label">Choose file to upload</label>
+                <input asp-for="FileToUpload" accept="File/csv">
+                <span asp-validation-for="FileToUpload" class="alert-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Upload" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Home</a>
+</div>
+
