@@ -5,7 +5,7 @@
         <p class="card-text">
             This application has been developed solely for the purpose of demonstrating software architecture for the given assignment.
             Foreseeing future requirement, file uploading is decoupled from Vehicle data to facilitate user to upload a file that can be parsed and saved in a database.  Though as per the current requirement, only CSV file has to be uploaded and saved in file system, following implementations expected in future.
-
+            Since the Currency format suggested is not Canadian official format(, seperated), Intl.NumberFormat in JS is not suitable while rendering data table.
             <ul>
                 <li>FILE_CSV/FILE_XML : as long as file to be saved to file system the implementation would be the same irrespective of file type</li>
                 <li>DB_CSV : Parse CSV file and save to DB</li>
