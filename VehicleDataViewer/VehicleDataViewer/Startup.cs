@@ -14,7 +14,7 @@ namespace VehicleDataViewer
 {
     public class Startup
     {
-        public static  string _APPLICATION_PATH;
+        internal static  string _APPLICATION_PATH;
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             _APPLICATION_PATH = env.ContentRootPath;
